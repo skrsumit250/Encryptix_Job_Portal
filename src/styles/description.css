@@ -1,0 +1,14 @@
+.Description-Box{
+    margin: 0;
+    background-color: black;
+    padding: 3vw;
+}
+.Description-Box h1{
+    margin: 0;
+    color: white;
+}
+.Description-Box p{
+    margin-top: 1vw;
+    font-size: large;
+    color: white;
+}
