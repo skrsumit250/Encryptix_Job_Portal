@@ -1,0 +1,15 @@
+.contact{
+    width: 70vw;
+    min-height: 30vh;
+    margin: 2vw auto 2vw auto;
+    padding: 3vw;
+    border: 2px black solid;
+    border-radius: 20px;
+}
+.contact h1{
+    margin: 0;
+}
+.contact p{
+    margin-top: 1vw;
+    font-size: large;
+}
