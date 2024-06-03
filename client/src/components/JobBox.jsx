@@ -1,21 +1,31 @@
 import '../styles/card.css'
 import Card from "./Card";
+import React,{useEffect, useState} from 'react'
+import axios from 'axios';
+
 function JobBox(){
-    const data={
-        company:"Microsoft",
-        role:"Software",
-        experience:"1-2 years",
-        location:"Bangalore",
-        skills:"HTML, CSS, Node JS",
-        description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente possimus ratione quisquam ea nam in veniam odit. Consectetur dolore ratione, "
-    }
+    const [jobs, setJobs] = useState([]);
+  
+    useEffect(() => {
+      const fetchJobs = async () => {
+        try {
+          const response = await axios.get('http://localhost:5000/Jobs');
+          setJobs(response.data);
+        } catch (err) {
+          console.error(err);
+        }
+      };
+  
+      fetchJobs();
+    }, []);
+
+    const filteredJobs = (location.pathname === '/'  ? jobs.slice(0, 3) : jobs);
+
     return(
         <div className="Box">
-            <Card data={data}/>
-            <Card data={data}/>
-            <Card data={data}/>
-            <Card data={data}/>
-
+            {filteredJobs.map((job)=>
+                <Card key={job._id} data={job}/>
+            )}
         </div>
     )
 }

@@ -1,9 +1,9 @@
 import '../styles/card.css'
 function Card(props){
-    const { company, role, experience, location,skills ,description} = props.data;
+    const { company, role, experience, location,skills ,description,imgURL} = props.data;
     return(
         <div className="card">
-            <img src="/BlueSkull.png" alt="" />
+            <img src={imgURL} alt="" />
             <div className="details">
                 <li>{company} | {role}</li>
                 <li>Experince: {experience} | location: {location}</li>
