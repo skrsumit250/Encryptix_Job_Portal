@@ -10,7 +10,7 @@ function Navbar(){
                 <li><Link to="/Post_Jobs">Post Jobs</Link></li>
                 <li><Link to="/Contact">Contact Us</Link></li>
             </ul>
-            <div className="user"><Link to="/user"><img src="/BlueSkull.png" alt="" /></Link></div>
+            {/* <div className="user-logo"><Link to="/user"><img src="/BlueSkull.png" alt="" /></Link></div> */}
         </div>
     )
 }
