@@ -27,6 +27,10 @@
     border: none;
     font-size: 1rem;
 }
+.details button a{
+    color: white;
+    text-decoration: none;
+}
 .details button:hover{
     background-color: rgb(59, 198, 59);
     cursor: pointer;

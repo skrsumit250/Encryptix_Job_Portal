@@ -27,14 +27,6 @@ app.get('/Jobs',async(req,res)=>{
         res.status(500).json({message:err.message});
     }
 });
-// app.get('/user',async(req,res) => {
-//     try{
-//         const user = await user_collection.find();
-//         res.json(user);
-//     }catch(err){
-//         res.status(500).json({message:err.message});
-//     }
-// });
 
 app.post('/postjobs', async (req, res) => {
     const newJob = new job_collection({
@@ -57,43 +49,28 @@ app.post('/postjobs', async (req, res) => {
     }
 });
 
-// app.post('/login', async (req, res) => {
-  
-//     const user = req.body;
-//     user_collection.findOne({username:user.username})
-//       .then(result => {
-//         if(result){
-//           if(result.password==user.password){
-//             console.log(result)
-//             res.json({success:true,result});
-//           }
-//           else{
-//             res.json({success:false});
-//           }
-//         }
-//         else{
-//           const newUser = user_collection({
-//             username:user.username,
-//             password:user.password
-//           });
-//           newUser.save()
-//           .then(savedUser => {
-//             res.json({success:true,savedUser});
-//             console.log("User created:", savedUser);
-//           })
-//           .catch(error => {
-//             console.error("Error saving user:", error);
-//           });
-//         }
-//       })
-//       .catch(error => {
-//         console.error("Error finding user:", error);
-//       });
-// });
-  
-  
-
-
+app.post('/apply', async (req, res) => {
+    const newForm = new user_collection({
+        key_id: req.body.key_id,
+        name: req.body.name,
+        email: req.body.email,
+        phone: req.body.phone,
+        education: req.body.education,
+        experience: req.body.experience,
+        projects: req.body.projects,
+        skills: req.body.skills,
+        about: req.body.about
+    });
+    console.log(newForm);
+    try{
+      await newForm.save();
+      res.json({ success: true });
+    }
+    catch (err) {
+      console.error('Error saving job:', err);
+      res.status(500).json({ error: 'Error posting job' });
+    }
+});
 app.listen(PORT,()=>{
     console.log(`App is listening on http://localhost:${PORT}`);
 })

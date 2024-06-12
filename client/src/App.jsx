@@ -5,7 +5,7 @@ import JobBox from './components/JobBox'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
 import PostJobs from './components/PostJobs'
-// import User from './components/User'
+import Apply from './components/Apply'
 import {Route,Routes} from 'react-router-dom'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
   const Post = <PostJobs/>
   const Abouts = <Contact/>
   const Contacts = <Contact/>
-  // const Users = <User/>
+  const Apply_Page = <Apply/>
   return(
     <>  <Navbar/>
         <Routes>
@@ -23,7 +23,7 @@ function App() {
           <Route path='/Post_Jobs' element={Post}/>
           <Route path='/About' element={Abouts}/>
           <Route path='/Contact' element={Contacts}/>
-          {/* <Route path='/user' element={Users}/> */}
+          <Route path='/Apply/:id' element={Apply_Page}/>
         </Routes>
         <Footer/>
     </>

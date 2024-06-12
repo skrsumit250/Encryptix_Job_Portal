@@ -1,14 +1,22 @@
 const mongoose = require('mongoose')
 const UserSchema = new mongoose.Schema({
-    username:{
+    key_id:{
         type:String,
         required:true
     },
-    password:{
+    name:{
+        type:String,
+        required:true
+    },
+    email:{
         type:String,
         required:true,
     },
-    highlight:{
+    phone:{
+        type:String,
+        required:true,
+    },
+    education:{
         type:String,
     },
     experience:{
@@ -17,15 +25,10 @@ const UserSchema = new mongoose.Schema({
     project:{
         type:String,
     },
-    skills:{
+    about:{
         type:String,
     },
-    education:{
-        type:String,
-    },
-    links:{
-        type:Array,
-    },
+
 });
 
 const colletion = new mongoose.model('user',UserSchema);
