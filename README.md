@@ -4,9 +4,9 @@
 This is a job portal website built with React.js for the frontend and Node.js for the backend. It allows job seekers to search for and apply for jobs, while employers can post job openings and manage applications.
 
 ## Technologies Used:
-**Frontend: React.js**
-**Backend: Node.js (with Express.js, Mongoose)**
-**Database:MongoDB**
+### Frontend: React.js
+## Backend: Node.js (with Express.js, Mongoose)
+## Database:MongoDB
 
 ## Installation:
 
