@@ -28,7 +28,7 @@ connect.then(()=>{
 })
 app.get('/',(req,res)=>{
     res.send("server is running");
-})
+});
 app.get('/Jobs',async(req,res)=>{
     try{
         const jobs =await job_collection.find();
