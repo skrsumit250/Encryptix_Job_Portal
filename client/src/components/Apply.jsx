@@ -21,8 +21,8 @@ function Apply(props){
         const UserData = {key_id,name,email,phone,education,experience,projects,skills,about};
         console.log(UserData);
         try {
-        const PORT = props.port
-        const response = await fetch(`http://localhost:${PORT}/apply`, {
+        const URL = props.url;
+        const response = await fetch(`${URL}/apply`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(UserData),

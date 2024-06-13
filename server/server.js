@@ -10,7 +10,7 @@ const app=express();
 app.use(cors());
 app.use(bodyParser.json());
 const PORT = 5000;
-const URI="mongodb://127.0.0.1:27017/Job_Portal"
+const URI="mongodb+srv://skrsumit250:MymongoDB250%40%23@jobportal.irzd0no.mongodb.net/?retryWrites=true&w=majority&appName=JobPortal"
 const connect=mongoose.connect(URI);
 connect.then(()=>{
     console.log("DB Connected");

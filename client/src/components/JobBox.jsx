@@ -11,8 +11,8 @@ function JobBox(props){
       
       const fetchJobs = async () => {
         try {
-          const PORT = props.port;
-          const response = await axios.get(`http://localhost:${PORT}/Jobs`);
+          const URL = props.url;
+          const response = await axios.get(`${URL}/Jobs`);
           setJobs(response.data);
         } catch (err) {
           console.error(err);
