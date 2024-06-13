@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/postjobs.css';
 
-function PostJobs() {
+function PostJobs(props) {
   const [company, setCompany] = useState('');
   const [role, setRole] = useState('');
   const [experience, setExperience] = useState('');

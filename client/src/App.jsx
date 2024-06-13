@@ -11,7 +11,7 @@ import {Route,Routes} from 'react-router-dom'
 function App() {
   const server_PORT = 5000;
   const Home =<><Description/><JobBox port={server_PORT}/></>
-  const Jobs = <JobBox/>
+  const Jobs = <JobBox port={server_PORT}/>
   const Post = <PostJobs port={server_PORT}/>
   const Abouts = <Contact/>
   const Contacts = <Contact/>

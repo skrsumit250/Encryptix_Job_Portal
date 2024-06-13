@@ -3,7 +3,7 @@ import Card from "./Card";
 import React,{useEffect, useState} from 'react'
 import axios from 'axios';
 
-function JobBox(){
+function JobBox(props){
     const [jobs, setJobs] = useState([]);
     
     useEffect(() => {
@@ -11,7 +11,8 @@ function JobBox(){
       
       const fetchJobs = async () => {
         try {
-          const PORT = props.port
+          const PORT = props.port;
+          console.log(PORT);
           const response = await axios.get(`http://localhost:${PORT}/Jobs`);
           setJobs(response.data);
         } catch (err) {
