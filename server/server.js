@@ -27,7 +27,7 @@ app.get('/Jobs',async(req,res)=>{
         res.status(500).json({message:err.message});
     }
 });
-app.use('/',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send("server is running");
 })
 app.post('/postjobs', async (req, res) => {
