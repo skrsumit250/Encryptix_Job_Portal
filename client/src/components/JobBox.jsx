@@ -5,8 +5,10 @@ import axios from 'axios';
 
 function JobBox(){
     const [jobs, setJobs] = useState([]);
-  
+    
     useEffect(() => {
+      
+      
       const fetchJobs = async () => {
         try {
           const response = await axios.get('http://localhost:5000/Jobs');

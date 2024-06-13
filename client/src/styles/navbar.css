@@ -3,8 +3,10 @@
     display: flex;
     flex-direction: row;
     border-bottom: 1px black solid;
+    background-color: #000;
 }
 h1{
+    color: #2f9b8e;
     font-size: 2rem;
     margin-top: 2vw;
 }
@@ -18,14 +20,14 @@ h1{
     list-style: none;
 }
 .navbar li a{
+    color: #2f9b8e;
     text-decoration: none;
     font-size: 4vh;
-    color: black;
 }
 .navbar li a:hover{
-    text-decoration:underline;
     cursor: pointer;
-    color: red;
+    color: white;
+    transition: .8s;
 }
 .user-logo{
     position: fixed;

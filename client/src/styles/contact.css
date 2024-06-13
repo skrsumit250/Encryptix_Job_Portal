@@ -1,15 +1,25 @@
 .contact{
-    width: 70vw;
-    min-height: 30vh;
-    margin: 2vw auto 2vw auto;
-    padding: 3vw;
-    border: 2px black solid;
-    border-radius: 20px;
+    margin: 20px 70px 20px 70px;
+    border-radius: 15px;
+    min-height: 26vh;
+    background-color: #2e2e2e;
+    color: white;
+    padding: 4vw
 }
 .contact h1{
     margin: 0;
+    color: white;
+}
+.contact a{
+    color: #2f9b8e;
+    text-decoration: none;
+}
+.contact a:hover{
+    color: white;
+    transition: 0.8s;
 }
 .contact p{
-    margin-top: 1vw;
+    color: #2f9b8e;
+    margin-top: 10px;
     font-size: large;
 }

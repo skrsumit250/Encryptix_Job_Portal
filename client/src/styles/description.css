@@ -1,14 +1,29 @@
 .Description-Box{
-    margin: 0;
-    background-color: black;
-    padding: 3vw;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: #2e2e2e;
+    padding-top: 2vw
 }
 .Description-Box h1{
-    margin: 0;
+    margin: 0 0 1vw 4vw;
     color: white;
 }
-.Description-Box p{
-    margin-top: 1vw;
+.about{
+    background-color: #222;
+    padding: 2vw 4vw 2vw 4vw;
+    border-radius: 0 0 15px 15px;
+}
+.about p{
+    margin: 5px 0 5px 0;
     font-size: large;
     color: white;
+}
+.about a{
+    text-decoration: none;
+    color: #2f9b8e;
+}
+.about a:hover{
+    color: white;
+    transition: 0.8s;
 }

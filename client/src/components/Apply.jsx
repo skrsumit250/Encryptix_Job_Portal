@@ -54,6 +54,7 @@ function Apply(){
   return (
     <div className="post">
       <form action="" className='forms' onSubmit={handleSubmit}>
+        <h1>Form</h1>
         <label>Name</label>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
 

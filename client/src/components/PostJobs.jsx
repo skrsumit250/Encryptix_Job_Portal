@@ -9,7 +9,8 @@ function PostJobs() {
   const [skills, setSkills] = useState('');
   const [description, setDescription] = useState('');
   const [imgURL, setImgURL] = useState('');
-
+  const [message, setMessage] = useState('');
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -33,7 +34,6 @@ function PostJobs() {
       console.log(data);
 
       if (data.success) {
-        console.log('Job posted successfully!');
         setCompany('');
         setRole('');
         setExperience('');
@@ -41,9 +41,13 @@ function PostJobs() {
         setSkills('');
         setDescription('');
         setImgURL('');
+        setMessage("Job Posted Successfully!");
+        console.log('Job posted successfully!');
+        console.log(message);
       }
       else{
         console.error('Error posting job:', data.error);
+        setMessage("Job Posted Unsuccessfully, Please try again!")
       }
     }catch (error) {
       console.error('Error submitting job:', error);
@@ -53,6 +57,7 @@ function PostJobs() {
   return (
     <div className="post">
       <form action="" className='forms' onSubmit={handleSubmit}>
+        <h1>Form</h1>
         <label>Company</label>
         <input type="text" value={company} onChange={(e) => setCompany(e.target.value)} required />
 
@@ -75,6 +80,7 @@ function PostJobs() {
         <textarea value={description} onChange={(e) => setDescription(e.target.value)} required></textarea>
 
         <button type="submit">Submit</button>
+        {message && <p>{message}</p>}
       </form>
     </div>
   );

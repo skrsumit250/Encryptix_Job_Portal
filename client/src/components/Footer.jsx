@@ -2,7 +2,15 @@ import '../styles/footer.css'
 function Footer(){
     return(
         <div className="footer">
-            <h1>Footer</h1>
+            <ul>
+                <hr />
+                <li>Privacy Policy</li>
+                <li>Terms of use</li>
+                <li>Refund Policy</li>
+                <p>© 2024 <a href="https://skrsumit250.github.io/Portfolio/">Sumit Kumar</a> All rights reserved</p>
+                <hr />
+            </ul>
+            
         </div>
     )
 }
