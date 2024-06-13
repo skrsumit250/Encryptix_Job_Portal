@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 
 const app=express();
 app.use(cors({
-    origin:["https://job-portal-server-jet-seven.vercel.app"],
+    origin:["*"],
     methods:["POST","GET"],
     credentials:true
 }));
