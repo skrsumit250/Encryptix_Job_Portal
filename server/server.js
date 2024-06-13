@@ -7,7 +7,11 @@ const user_collection=require("./Models/User")
 const bodyParser = require('body-parser');
 
 const app=express();
-app.use(cors());
+app.use(cors({
+    origin:["https://job-portal-server-jet-seven.vercel.app"],
+    methods:["POST","GET"],
+    credentials:true
+}));
 app.use(bodyParser.json());
 const PORT = 5000;
 const URI="mongodb+srv://skrsumit250:MymongoDB250%40%23@jobportal.irzd0no.mongodb.net/?retryWrites=true&w=majority&appName=JobPortal"
