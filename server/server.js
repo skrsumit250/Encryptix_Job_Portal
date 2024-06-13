@@ -26,7 +26,9 @@ connect.then(()=>{
 .catch((err)=>{
     console.log("DB Not Connected",err);
 })
-
+app.get('/',(req,res)=>{
+    res.send("server is running");
+})
 app.get('/Jobs',async(req,res)=>{
     try{
         const jobs =await job_collection.find();
@@ -35,9 +37,6 @@ app.get('/Jobs',async(req,res)=>{
         res.status(500).json({message:err.message});
     }
 });
-app.get('/',(req,res)=>{
-    res.send("server is running");
-})
 app.post('/postjobs', async (req, res) => {
     const newJob = new job_collection({
         company: req.body.company,
