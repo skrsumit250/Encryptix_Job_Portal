@@ -14,7 +14,8 @@ This is a job portal website built with React.js for the frontend and Node.js fo
 1. Ensure you have Node.js and npm installed on your system. You can download them from the official website: https://nodejs.org/en
 
 2. Clone the Repository:
-Clone this repository using Git: `git clone https://github.com/skrsumit250/Encryptix_Job_Portal.git`
+Clone this repository using Git: 
+`git clone https://github.com/skrsumit250/Encryptix_Job_Portal.git`
 
 3. Install Dependencies:
 - Navigate to the project directory:
