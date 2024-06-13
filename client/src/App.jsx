@@ -9,12 +9,13 @@ import Apply from './components/Apply'
 import {Route,Routes} from 'react-router-dom'
 
 function App() {
-  const Home =<><Description/><JobBox/></>
+  const server_PORT = 5000;
+  const Home =<><Description/><JobBox port={server_PORT}/></>
   const Jobs = <JobBox/>
-  const Post = <PostJobs/>
+  const Post = <PostJobs port={server_PORT}/>
   const Abouts = <Contact/>
   const Contacts = <Contact/>
-  const Apply_Page = <Apply/>
+  const Apply_Page = <Apply port={server_PORT}/>
   return(
     <>  <Navbar/>
         <Routes>

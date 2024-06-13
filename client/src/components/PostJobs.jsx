@@ -24,7 +24,8 @@ function PostJobs() {
       imgURL,
     };
     try {
-      const response = await fetch('http://localhost:5000/postjobs', {
+      const PORT = props.port;
+      const response = await fetch(`http://localhost:${PORT}/postjobs`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(jobData),

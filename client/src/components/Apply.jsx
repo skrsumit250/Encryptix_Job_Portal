@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/postjobs.css';
 
-function Apply(){
+function Apply(props){
     const {id } = useParams();
     const key_id = id;
     const [name, setName] = useState('');
@@ -21,7 +21,8 @@ function Apply(){
         const UserData = {key_id,name,email,phone,education,experience,projects,skills,about};
         console.log(UserData);
         try {
-        const response = await fetch('http://localhost:5000/apply', {
+        const PORT = props.port
+        const response = await fetch(`http://localhost:${PORT}/apply`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(UserData),
