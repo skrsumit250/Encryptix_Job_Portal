@@ -7,7 +7,6 @@ function Card(props){
         <div className="card">
             <img src={imgURL} alt="" />
             <div className="details">
-                {console.log(_id)}
                 <li>{company} | {role}</li>
                 <li>Experince: {experience} | location: {location}</li>
                 <li>Skills Required : {skills}</li>
