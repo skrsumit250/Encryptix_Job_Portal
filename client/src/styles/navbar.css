@@ -41,18 +41,19 @@
 }
 @media only screen and (max-width: 600px) {
     .navbar{
-        padding: 5px;
+        padding: 5px auto 5px auto;
         align-items: center;
+        flex-direction: column;
     }
     .navbar h1{
         font-size: 20px;
     }
     .navbar ul{
-        margin-top: 8px;
+        margin-top: 10px;
         padding: 0;
     }
     .navbar li{
-        margin: 1vw;
+        margin: 5px;
     }
     .navbar li a{
         font-size: 15px;

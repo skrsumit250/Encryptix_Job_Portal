@@ -45,3 +45,24 @@
     list-style: none;
     font-size: 1rem;
 }
+@media only screen and (max-width: 600px) {
+    .Box{
+        width: 90vw;
+        margin: 10px auto 10px auto;
+    }
+    .card{
+        border-radius: 0;
+    }
+    .card img{
+        width: 70px;
+        height: 70px;
+    }
+    .details li{
+        font-size: 10px;
+    }
+    .details button{
+        font-size: 10px;
+        padding: 2px;
+        border-radius: 0;
+    }
+  }

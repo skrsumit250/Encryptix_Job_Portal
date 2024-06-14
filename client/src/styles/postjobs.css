@@ -65,3 +65,28 @@
     transition: all 0.8s;
     cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+    .post{
+        margin: 10px auto 10px auto;
+        width: 80vw;
+    }
+    .forms h1{
+        font-size: 20px;
+    }
+    .forms input{
+        height: 20px;
+        border-radius: 0;
+    }
+    .forms label{
+        font-size: 15px;
+    }
+    .forms textarea{
+        height: 30px;
+    }
+    .forms button{
+        border-radius: 0;
+    }
+    .forms p{
+        font-size: 20px;
+    }
+  }

@@ -26,3 +26,29 @@
     color: white;
     transition: 0.8s;
 }
+@media only screen and (max-width: 600px) {
+    .footer{
+        justify-content: left;
+        min-height: 100px;
+    }
+    .footer hr{
+        width: 95vw;
+        margin: 0;
+    }
+    .footer ul{
+        margin: 5px;
+        padding: 5px;
+        flex-direction: column;
+    }
+    .footer li{
+        font-size: 10px;
+        margin: 5px 0 5px 5px;
+    }
+    .footer p{
+        font-size: 10px;
+        margin: 5px 0 5px 5px;
+    }
+    .footer a{
+        font-size: 10px;
+    }
+  }

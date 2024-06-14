@@ -27,3 +27,19 @@
     color: white;
     transition: 0.8s;
 }
+
+@media only screen and (max-width: 600px) {
+    .Description-Box{
+        margin: 0;
+        border-radius: 0;
+    }
+    .Description-Box h1{
+        font-size: 15px;
+    }
+    .about{
+        border-radius: 0;
+    }
+    .about p{
+        font-size: 10px;
+    }
+  }
