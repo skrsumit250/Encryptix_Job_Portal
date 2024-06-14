@@ -9,7 +9,7 @@ import Apply from './components/Apply'
 import {Route,Routes} from 'react-router-dom'
 
 function App() {
-  const URL = "https://encryptix-job-portal-ihpp3nk3g-sumit-krs-projects.vercel.app"
+  const URL = "http://localhost:5000"
   const Home =<><Description/><JobBox url={URL}/></>
   const Jobs = <JobBox url={URL}/>
   const Post = <PostJobs url={URL}/>
