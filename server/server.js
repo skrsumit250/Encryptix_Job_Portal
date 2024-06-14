@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 require('dotenv').config();
-const PORT = process.env.port || 3000;
+const PORT = process.env.port || 5000;
 const URI= process.env.DB_URI;
 const connect=mongoose.connect(URI);
 connect.then(()=>{
