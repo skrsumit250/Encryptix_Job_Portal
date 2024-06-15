@@ -1,4 +1,5 @@
 import '../styles/description.css'
+import {Link} from 'react-router-dom'
 function Description(){
     const headline="Welcome to Job.Search()";
     const paragraph="At Job.Search(), we believe in the power of connecting talent with opportunity. Whether you are a job seeker looking for the perfect role or an employer searching for the ideal candidate, we are here to make the process seamless and successful.";
@@ -10,8 +11,8 @@ function Description(){
             <div className="about">
                 <p>{paragraph}</p>
                 <br />
-                <p><a href="/Post_Jobs">For Employers</a>{employer}</p>
-                <p><a href="/Jobs">For Job Seekers</a>{jobseekers}</p>
+                <p><Link to="/Post_Jobs">For Employers</Link>{employer}</p>
+                <p><Link to="/Jobs">For Job Seekers</Link>{jobseekers}</p>
             </div>
             
         </div>
