@@ -14,6 +14,8 @@ function JobBox(props){
           const URL = props.url;
           const response = await axios.get(`${URL}/Jobs`);
           setJobs(response.data);
+          console.log("server is running");
+         
         } catch (err) {
           console.error(err);
         }
