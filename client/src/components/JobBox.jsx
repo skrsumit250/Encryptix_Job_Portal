@@ -25,9 +25,9 @@ function JobBox(props){
     }, []);
 
     const filteredJobs = (location.pathname === '/'  ? jobs.slice(0, 3) : jobs);
-
     return(
         <div className="Box">
+            {jobs.length==0 && <p id='load'>Loading.....</p>}
             {filteredJobs.map((job)=>
                 <Card key={job._id} data={job}/>
             )}
