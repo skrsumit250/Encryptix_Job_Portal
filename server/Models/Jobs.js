@@ -1,34 +1,35 @@
-const mongoose=require('mongoose')
-const JobSchema = new mongoose.Schema({
-    company:{
-        type:String,
-        required:true
-    },
-    role:{
-        type:String,
-        required:true
-    },
-    experience:{
-        type:String,
-        required:true
-    },
-    location:{
-        type:String,
-        required:true
-    },
-    skills:{
-        type:String,
-        required:true
-    },
-    description:{
-        type:String,
-        required:true
-    },
-    imgURL:{
-        type:String,
-        required:true
-    },
-})
+const { DataTypes } = require('sequelize');
+const sequelize = require('./db');
 
-const colletion=new mongoose.model("job",JobSchema);
-module.exports=colletion;
+const Job = sequelize.define('Job', {
+  company: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
+  role: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
+  experience: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
+  location: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
+  skills: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
+  description: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
+  imgURL: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  }
+});
+
+module.exports = Job;

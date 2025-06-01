@@ -1,35 +1,36 @@
-const mongoose = require('mongoose')
-const UserSchema = new mongoose.Schema({
-    key_id:{
-        type:String,
-        required:true
-    },
-    name:{
-        type:String,
-        required:true
-    },
-    email:{
-        type:String,
-        required:true,
-    },
-    phone:{
-        type:String,
-        required:true,
-    },
-    education:{
-        type:String,
-    },
-    experience:{
-        type:String,
-    },
-    project:{
-        type:String,
-    },
-    about:{
-        type:String,
-    },
+const { DataTypes } = require('sequelize');
+const sequelize = require('./db');
 
+const User = sequelize.define('User', {
+  key_id: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true
+  },
+  phone: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  education: {
+    type: DataTypes.TEXT
+  },
+  experience: {
+    type: DataTypes.TEXT
+  },
+  projects: { // Fixed typo from 'project' to 'projects'
+    type: DataTypes.TEXT
+  },
+  about: {
+    type: DataTypes.TEXT
+  }
 });
 
-const colletion = new mongoose.model('user',UserSchema);
-module.exports = colletion;
+module.exports = User;

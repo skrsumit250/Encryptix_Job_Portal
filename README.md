@@ -1,12 +1,12 @@
 # Job Portal
 **Author : [Sumit Kumar](https://skrsumit250.github.io/Portfolio/)**
 ## Description:
-This is a job portal website built with React.js for the frontend and Node.js for the backend. It allows job seekers to search for and apply for jobs, while employers can post job openings and manage applications.
+This is a job portal website built with React.js for the frontend, Node.js for the backend and MySQL for databases. It allows job seekers to search for and apply for jobs, while employers can post job openings and manage applications.
 
 ## Technologies Used:
 ### Frontend: React.js
 ## Backend: Node.js (with Express.js, Mongoose)
-## Database:MongoDB
+## Database: MySQL
 
 ## Installation:
 
@@ -25,7 +25,7 @@ This is a job portal website built with React.js for the frontend and Node.js fo
 - This will typically start the server on http://localhost:5173/
 
 5. Configure database:
-- Make sure you have mongoDB installed in your system
+- Make sure you have MySQL installed in your system
 - Connect the Database
 
 ## Usage:
