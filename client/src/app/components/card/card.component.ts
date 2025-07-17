@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,12 +8,5 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './card.component.css'
 })
 export class CardComponent {
-  company: string = 'Company Name';
-  role: string = 'Job Role';
-  experience: string = '2-5 years';
-  location: string = 'Remote';
-  skills: string = 'JavaScript, Angular, Node.js';
-  description: string = 'This is a job description for the position.';
-  imgURL: string = 'data:image/png;base64,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';
-  _id: string = '12345';
+  @Input() data: any;
 }

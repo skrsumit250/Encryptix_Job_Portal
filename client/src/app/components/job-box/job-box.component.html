@@ -1,10 +1,4 @@
 <div class="Box">
-    <!-- {jobs.length==0 && <p id='load'>Loading.....</p>}
-    {filteredJobs.map((job)=>
-        <Card key={job._id} data={job}/>
-    )} -->
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
+  <p *ngIf="jobs.length === 0" id="load">Loading.....</p>
+  <app-card *ngFor="let item of jobs" [data]="item"></app-card>
 </div>

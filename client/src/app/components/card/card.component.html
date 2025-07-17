@@ -1,10 +1,10 @@
 <div class="card">
-    <img [src]='imgURL' alt="" />
+    <img [src]='data.imgURL' alt="" />
     <div class="details">
-        <li>{{company}} | {{role}}</li>
-        <li>Experince: {{experience}} | location: {{location}}</li>
-        <li>Skills Required : {{skills}}</li>
-        <li>{{description}}</li>
+        <li>{{data.company}} | {{data.role}}</li>
+        <li>Experince: {{data.experience}} | location: {{data.location}}</li>
+        <li>Skills Required : {{data.skills}}</li>
+        <li>{{data.description}}</li>
         <!-- <button><Link to={`/Apply/${_id}`}>Apply</Link></button> -->
         <button><a>Apply</a></button>
     </div>

@@ -4,7 +4,7 @@
 This is a job portal website built with React.js for the frontend, Node.js for the backend and MySQL for databases. It allows job seekers to search for and apply for jobs, while employers can post job openings and manage applications.
 
 ## Technologies Used:
-### Frontend: React.js
+### Frontend: Angular.js
 ## Backend: Node.js (with Express.js, Mongoose)
 ## Database: MySQL
 
@@ -21,7 +21,7 @@ This is a job portal website built with React.js for the frontend, Node.js for t
 
 4. Running the Application:
 - Start Server:`npm start` (Make sure you are in server folder)
-- Start React App: `npm run dev` (Make sure you are in client folder)
+- Start React App: `ng serve` (Make sure you are in client folder)
 - This will typically start the server on http://localhost:5173/
 
 5. Configure database:
